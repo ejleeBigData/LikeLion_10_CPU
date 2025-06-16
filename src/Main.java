@@ -25,11 +25,11 @@ class CPU {
            switch (opcode) {
                case LOAD:
                    register = memory[operand];
-                   System.out.println("MOV: Loading Memory[" + opcode + " (" + memory[0] + ") into register.]");
+                   System.out.println("LOAD: Loading memory[" + operand + "] (" + memory[operand] + ") into register.");
                    break;
                case SAVE:
-                   register = memory[operand];
-                   System.out.println("MOV: Loading Memory[" + opcode + " (" + memory[0] + ") into register.]");
+                   memory[operand] = register;
+                   System.out.println("SAVE: Saving memory[" + operand + "] (" + memory[operand] + ") from register.");
                    break;
                case ADD:
                    register = memory[operand];
